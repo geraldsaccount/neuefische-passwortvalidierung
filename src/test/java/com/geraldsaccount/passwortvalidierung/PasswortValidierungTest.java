@@ -16,6 +16,16 @@ public class PasswortValidierungTest {
     }
 
     @Test
+    public void hasValidLength_shouldReturnTrue_calledWith12345678() {
+        String input = "12345678";
+        boolean expected = true;
+
+        boolean actual = PasswortValidierung.hasValidLength(input);
+
+        assertEquals(expected, actual, () -> "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    @Test
     public void hasValidLength_shouldReturnFalse_calledWithHello() {
         String input = "Hello";
         boolean expected = false;
@@ -24,4 +34,5 @@ public class PasswortValidierungTest {
 
         assertEquals(expected, actual, () -> "Expected " + expected + " but got " + actual + " for input: " + input);
     }
+
 }
