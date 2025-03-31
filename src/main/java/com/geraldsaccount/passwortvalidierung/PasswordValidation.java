@@ -28,14 +28,14 @@ public class PasswordValidation {
         return password.matches(".*[a-z].*") && password.matches(".*[A-Z].*");
     }
 
-    public static boolean isCommonPassword(String password) {
-        final String[] unsafePasswords = {
-                "Passw0rd!", "Qwerty123!", "Welcome1!", "Admin123!", "Test1234!",
-                "LetMeIn1!", "Changeme1!", "Password1!", "Secure123!", "Abcdefg1!",
-                "Summer2024!", "Winter123!", "Hello123!", "Welcome01!", "Football1!",
-                "Sunshine1!", "Monkey123!", "Iloveyou1!", "Dragon123!", "Superman1!"
-        };
+    static final String[] unsafePasswords = {
+            "Passw0rd!", "Qwerty123!", "Welcome1!", "Admin123!", "Test1234!",
+            "LetMeIn1!", "Changeme1!", "Password1!", "Secure123!", "Abcdefg1!",
+            "Summer2024!", "Winter123!", "Hello123!", "Welcome01!", "Football1!",
+            "Sunshine1!", "Monkey123!", "Iloveyou1!", "Dragon123!", "Superman1!"
+    };
 
+    public static boolean isCommonPassword(String password) {
         for (String commonPassword : unsafePasswords) {
             if (password.equals(commonPassword)) {
                 return true;
