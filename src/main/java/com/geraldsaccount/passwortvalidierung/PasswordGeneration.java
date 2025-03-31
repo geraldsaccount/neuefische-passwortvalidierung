@@ -2,7 +2,7 @@ package com.geraldsaccount.passwortvalidierung;
 
 import java.util.Random;
 
-public class PasswortGenerierung {
+public class PasswordGeneration {
     public static void main(String[] args) {
         System.out.println(generatePassword());
     }
@@ -39,7 +39,7 @@ public class PasswortGenerierung {
                 }
                 password += "-";
             }
-        } while (!PasswortValidierung.isValidPassword(password));
+        } while (!PasswordValidation.isValidPassword(password));
 
         return password;
     }

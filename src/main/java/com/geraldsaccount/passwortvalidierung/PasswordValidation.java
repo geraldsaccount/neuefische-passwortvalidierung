@@ -8,11 +8,7 @@ package com.geraldsaccount.passwortvalidierung;
  *
  * @author Gerald
  */
-public class PasswortValidierung {
-
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+public class PasswordValidation {
 
     public static boolean isValidPassword(String password) {
         return hasValidLength(password) && containsDigit(password) && containsUppercaseAndLowercase(password)

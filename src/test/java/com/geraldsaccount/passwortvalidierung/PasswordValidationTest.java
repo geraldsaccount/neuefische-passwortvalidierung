@@ -3,7 +3,7 @@ package com.geraldsaccount.passwortvalidierung;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-public class PasswortValidierungTest {
+public class PasswordValidationTest {
 
     // region Password Validation
 
@@ -12,7 +12,7 @@ public class PasswortValidierungTest {
         String input = "Str0ngP@ss!"; // Complies with each rule
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.isValidPassword(input);
+        boolean actual = PasswordValidation.isValidPassword(input);
 
         String testName = "Password Validation Test ";
         assertEquals(expected, actual,
@@ -24,7 +24,7 @@ public class PasswortValidierungTest {
         String input = "A1@b"; // Less than 8 characters
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.isValidPassword(input);
+        boolean actual = PasswordValidation.isValidPassword(input);
 
         String testName = "Password too short test: ";
         assertEquals(expected, actual,
@@ -36,7 +36,7 @@ public class PasswortValidierungTest {
         String input = "StrongPass!"; // No digit
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.isValidPassword(input);
+        boolean actual = PasswordValidation.isValidPassword(input);
 
         String testName = "Password missing digit test: ";
         assertEquals(expected, actual,
@@ -48,7 +48,7 @@ public class PasswortValidierungTest {
         String input = "weakpassword1!"; // No uppercase letter
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.isValidPassword(input);
+        boolean actual = PasswordValidation.isValidPassword(input);
 
         String testName = "Password missing uppercase test: ";
         assertEquals(expected, actual,
@@ -60,7 +60,7 @@ public class PasswortValidierungTest {
         String input = "STRONG1!"; // No lowercase letter
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.isValidPassword(input);
+        boolean actual = PasswordValidation.isValidPassword(input);
 
         String testName = "Password missing lowercase test: ";
         assertEquals(expected, actual,
@@ -72,7 +72,7 @@ public class PasswortValidierungTest {
         String input = "StrongPass1"; // No special character
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.isValidPassword(input);
+        boolean actual = PasswordValidation.isValidPassword(input);
 
         String testName = "Password missing special character test: ";
         assertEquals(expected, actual,
@@ -84,7 +84,7 @@ public class PasswortValidierungTest {
         String input = "Invalid Pass1!"; // Contains space
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.isValidPassword(input);
+        boolean actual = PasswordValidation.isValidPassword(input);
 
         String testName = "Password contains invalid characters test: ";
         assertEquals(expected, actual,
@@ -100,7 +100,7 @@ public class PasswortValidierungTest {
         String input = "Hello, World!";
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.hasValidLength(input);
+        boolean actual = PasswordValidation.hasValidLength(input);
 
         String testName = "Length Validation Test ";
         assertEquals(expected, actual,
@@ -112,7 +112,7 @@ public class PasswortValidierungTest {
         String input = "12345678";
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.hasValidLength(input);
+        boolean actual = PasswordValidation.hasValidLength(input);
 
         String testName = "Length Validation Test ";
         assertEquals(expected, actual,
@@ -124,7 +124,7 @@ public class PasswortValidierungTest {
         String input = "Hello";
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.hasValidLength(input);
+        boolean actual = PasswordValidation.hasValidLength(input);
 
         String testName = "Length Validation Test ";
         assertEquals(expected, actual,
@@ -140,7 +140,7 @@ public class PasswortValidierungTest {
         String input = "123";
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.containsDigit(input);
+        boolean actual = PasswordValidation.containsDigit(input);
 
         String testName = "Digit Validation Test ";
         assertEquals(expected, actual,
@@ -152,7 +152,7 @@ public class PasswortValidierungTest {
         String input = "ABC";
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.containsDigit(input);
+        boolean actual = PasswordValidation.containsDigit(input);
 
         String testName = "Digit Validation Test ";
         assertEquals(expected, actual,
@@ -168,7 +168,7 @@ public class PasswortValidierungTest {
         String input = "AabBCc";
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.containsUppercaseAndLowercase(input);
+        boolean actual = PasswordValidation.containsUppercaseAndLowercase(input);
 
         String testName = "Upper-/Lowercase Validation Test ";
         assertEquals(expected, actual,
@@ -180,7 +180,7 @@ public class PasswortValidierungTest {
         String input = "aabbcc";
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.containsUppercaseAndLowercase(input);
+        boolean actual = PasswordValidation.containsUppercaseAndLowercase(input);
 
         String testName = "Upper-/Lowercase Validation Test ";
         assertEquals(expected, actual,
@@ -192,7 +192,7 @@ public class PasswortValidierungTest {
         String input = "AABBCC";
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.containsUppercaseAndLowercase(input);
+        boolean actual = PasswordValidation.containsUppercaseAndLowercase(input);
 
         String testName = "Upper-/Lowercase Validation Test ";
         assertEquals(expected, actual,
@@ -204,7 +204,7 @@ public class PasswortValidierungTest {
         String input = "123456";
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.containsUppercaseAndLowercase(input);
+        boolean actual = PasswordValidation.containsUppercaseAndLowercase(input);
 
         String testName = "Upper-/Lowercase Validation Test ";
         assertEquals(expected, actual,
@@ -220,7 +220,7 @@ public class PasswortValidierungTest {
         String input = "Password1!";
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.isCommonPassword(input);
+        boolean actual = PasswordValidation.isCommonPassword(input);
 
         String testName = "Common Password Test ";
         assertEquals(expected, actual,
@@ -232,7 +232,7 @@ public class PasswortValidierungTest {
         String input = "UbisoftIsInBigTrouble";
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.isCommonPassword(input);
+        boolean actual = PasswordValidation.isCommonPassword(input);
 
         String testName = "Common Password Test ";
         assertEquals(expected, actual,
@@ -248,7 +248,7 @@ public class PasswortValidierungTest {
         String input = "SafePassword?!";
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.containsSpecialCharacters(input);
+        boolean actual = PasswordValidation.containsSpecialCharacters(input);
 
         String testName = "Special Character Test ";
         assertEquals(expected, actual,
@@ -260,7 +260,7 @@ public class PasswortValidierungTest {
         String input = "SafePassword!";
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.containsSpecialCharacters(input);
+        boolean actual = PasswordValidation.containsSpecialCharacters(input);
 
         String testName = "Special Character Test ";
         assertEquals(expected, actual,
@@ -272,7 +272,7 @@ public class PasswortValidierungTest {
         String input = "SafePassword";
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.containsSpecialCharacters(input);
+        boolean actual = PasswordValidation.containsSpecialCharacters(input);
 
         String testName = "Special Character Test ";
         assertEquals(expected, actual,
@@ -288,7 +288,7 @@ public class PasswortValidierungTest {
         String input = "Safe Password.";
         boolean expected = true;
 
-        boolean actual = PasswortValidierung.containsIllegalCharacters(input);
+        boolean actual = PasswordValidation.containsIllegalCharacters(input);
 
         String testName = "Special Character Test ";
         assertEquals(expected, actual,
@@ -300,7 +300,7 @@ public class PasswortValidierungTest {
         String input = "SafePassword";
         boolean expected = false;
 
-        boolean actual = PasswortValidierung.containsIllegalCharacters(input);
+        boolean actual = PasswordValidation.containsIllegalCharacters(input);
 
         String testName = "Special Character Test ";
         assertEquals(expected, actual,
