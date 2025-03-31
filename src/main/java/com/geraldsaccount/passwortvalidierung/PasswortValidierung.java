@@ -16,7 +16,8 @@ public class PasswortValidierung {
 
     public static boolean isValidPassword(String password) {
         return hasValidLength(password) && containsDigit(password) && containsUppercaseAndLowercase(password)
-                && !isCommonPassword(password);
+                && !isCommonPassword(password) && containsSpecialCharacters(password)
+                && !containsIllegalCharacters(password);
     }
 
     public static boolean hasValidLength(String password) {
@@ -49,10 +50,10 @@ public class PasswortValidierung {
     }
 
     public static boolean containsSpecialCharacters(String password) {
-        return false;
+        return password.matches(".*[!#$%&'()*+,-./:;<=>?@[\\\\]^_`{|}~].*");
     }
 
-    static boolean containsIllegalCharacters(String input) {
-        return false;
+    static boolean containsIllegalCharacters(String password) {
+        return password.matches(".*[ ,.'\"\0\t\r\n].*");
     }
 }
