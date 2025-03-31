@@ -18,7 +18,7 @@ public class PasswortValidierung {
         return false;
     }
 
-    public static boolean isLengthValid(String password) {
+    public static boolean hasValidLength(String password) {
         return false;
     }
 
