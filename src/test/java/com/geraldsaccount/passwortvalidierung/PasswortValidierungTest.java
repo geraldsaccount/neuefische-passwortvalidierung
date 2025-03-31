@@ -76,8 +76,8 @@ public class PasswortValidierungTest {
     // region Upper-/Lowercase
 
     @Test
-    public void containsDigit_shouldReturnTrue_calledWithAaBbCc() {
-        String input = "AaBbCc";
+    public void containsUppercaseAndLowercase_shouldReturnTrue_calledWithAabBCc() {
+        String input = "AabBCc";
         boolean expected = true;
 
         boolean actual = PasswortValidierung.containsUppercaseAndLowercase(input);
@@ -88,7 +88,7 @@ public class PasswortValidierungTest {
     }
 
     @Test
-    public void containsDigit_shouldReturnFalse_calledWithaabbcc() {
+    public void containsUppercaseAndLowercase_shouldReturnFalse_calledWithaabbcc() {
         String input = "aabbcc";
         boolean expected = false;
 
@@ -100,7 +100,7 @@ public class PasswortValidierungTest {
     }
 
     @Test
-    public void containsDigit_shouldReturnFalse_calledWith123456() {
+    public void containsUppercaseAndLowercase_shouldReturnFalse_calledWith123456() {
         String input = "123456";
         boolean expected = false;
 

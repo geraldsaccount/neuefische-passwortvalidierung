@@ -27,7 +27,7 @@ public class PasswortValidierung {
     }
 
     public static boolean containsUppercaseAndLowercase(String password) {
-        return false;
+        return password.matches(".*[a-z].*") && password.matches(".*[A-Z].*");
     }
 
     public static boolean isCommonPassword(String password) {
