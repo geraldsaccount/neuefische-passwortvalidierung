@@ -8,8 +8,8 @@ public class PasswortGenerierung {
     }
 
     public static String generatePassword() {
-        String lowerCase = "abcdefghijklmnopqrstuvwxyz";
-        String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lowerCase = "abcdefghijkmnpqrstuvwxyz";
+        String upperCase = "ABCDEFGHJKLMNPQRSTUVWXYZ";
         String digits = "0123456789";
         String specialCharacters = "!#$%&'()*+-/:;<=>?@[]^_{|}~";
 
