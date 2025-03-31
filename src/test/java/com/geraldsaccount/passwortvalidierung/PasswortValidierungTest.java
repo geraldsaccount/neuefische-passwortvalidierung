@@ -72,4 +72,44 @@ public class PasswortValidierungTest {
     }
 
     // endregion
+
+    // region Upper-/Lowercase
+
+    @Test
+    public void containsDigit_shouldReturnTrue_calledWithAaBbCc() {
+        String input = "AaBbCc";
+        boolean expected = true;
+
+        boolean actual = PasswortValidierung.containsUppercaseAndLowercase(input);
+
+        String testName = "Upper-/Lowercase Validation Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    @Test
+    public void containsDigit_shouldReturnFalse_calledWithaabbcc() {
+        String input = "aabbcc";
+        boolean expected = false;
+
+        boolean actual = PasswortValidierung.containsUppercaseAndLowercase(input);
+
+        String testName = "Upper-/Lowercase Validation Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    @Test
+    public void containsDigit_shouldReturnFalse_calledWith123456() {
+        String input = "123456";
+        boolean expected = false;
+
+        boolean actual = PasswortValidierung.containsUppercaseAndLowercase(input);
+
+        String testName = "Upper-/Lowercase Validation Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    // endregion
 }
