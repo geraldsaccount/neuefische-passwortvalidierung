@@ -19,7 +19,7 @@ public class PasswortValidierung {
     }
 
     public static boolean hasValidLength(String password) {
-        return false;
+        return password.length() >= 8;
     }
 
     public static boolean containsDigit(String password) {
