@@ -15,7 +15,8 @@ public class PasswortValidierung {
     }
 
     public static boolean isValidPassword(String password) {
-        return false;
+        return hasValidLength(password) && containsDigit(password) && containsUppercaseAndLowercase(password)
+                && !isCommonPassword(password);
     }
 
     public static boolean hasValidLength(String password) {
