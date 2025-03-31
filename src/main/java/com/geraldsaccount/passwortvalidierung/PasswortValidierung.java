@@ -47,4 +47,12 @@ public class PasswortValidierung {
 
         return false;
     }
+
+    public static boolean containsSpecialCharacters(String password) {
+        return false;
+    }
+
+    static boolean containsIllegalCharacters(String input) {
+        return false;
+    }
 }

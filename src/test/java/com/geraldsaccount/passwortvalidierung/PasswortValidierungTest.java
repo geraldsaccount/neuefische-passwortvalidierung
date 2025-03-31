@@ -216,4 +216,72 @@ public class PasswortValidierungTest {
     }
 
     // endregion
+
+    // region Special Characters
+
+    @Test
+    public void containsSpecialCharacters_shouldReturnTrue_whenPasswordHasSpecialCharacters() {
+        String input = "SafePassword?!";
+        boolean expected = true;
+
+        boolean actual = PasswortValidierung.containsSpecialCharacters(input);
+
+        String testName = "Special Character Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    @Test
+    public void containsSpecialCharacters_shouldReturnTrue_whenPasswordHasOneSpecialCharacter() {
+        String input = "SafePassword!";
+        boolean expected = true;
+
+        boolean actual = PasswortValidierung.containsSpecialCharacters(input);
+
+        String testName = "Special Character Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    @Test
+    public void containsSpecialCharacters_shouldReturnFalse_whenPasswordHasNoSpecialCharacters() {
+        String input = "SafePassword";
+        boolean expected = false;
+
+        boolean actual = PasswortValidierung.containsSpecialCharacters(input);
+
+        String testName = "Special Character Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    // endregion
+
+    // region Illegal Characters
+
+    @Test
+    public void containsIllegalCharacters_shouldReturnTrue_whenPasswordHasIllegalCharacters() {
+        String input = "Safe Password.";
+        boolean expected = true;
+
+        boolean actual = PasswortValidierung.containsIllegalCharacters(input);
+
+        String testName = "Special Character Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    @Test
+    public void containsIllegalCharacters_shouldReturnFalse_whenPasswordHasNoIllegalCharacters() {
+        String input = "SafePassword";
+        boolean expected = false;
+
+        boolean actual = PasswortValidierung.containsIllegalCharacters(input);
+
+        String testName = "Special Character Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    // endregion
 }
