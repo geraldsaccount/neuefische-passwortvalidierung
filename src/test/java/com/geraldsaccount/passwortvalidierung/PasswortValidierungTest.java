@@ -112,4 +112,32 @@ public class PasswortValidierungTest {
     }
 
     // endregion
+
+    // region Common Passwords
+
+    @Test
+    public void isCommonPassword_shouldReturnTrue_calledWithPassword1() {
+        String input = "Password1!";
+        boolean expected = true;
+
+        boolean actual = PasswortValidierung.isCommonPassword(input);
+
+        String testName = "Common Password Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    @Test
+    public void isCommonPassword_shouldReturnFalse_calledWithUbissoftIsInBigTrouble() {
+        String input = "UbisoftIsInBigTrouble";
+        boolean expected = false;
+
+        boolean actual = PasswortValidierung.isCommonPassword(input);
+
+        String testName = "Common Password Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    // endregion
 }
