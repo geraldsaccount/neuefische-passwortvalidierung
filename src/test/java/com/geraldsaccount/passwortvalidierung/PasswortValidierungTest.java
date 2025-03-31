@@ -14,7 +14,9 @@ public class PasswortValidierungTest {
 
         boolean actual = PasswortValidierung.hasValidLength(input);
 
-        assertEquals(expected, actual, () -> "Expected " + expected + " but got " + actual + " for input: " + input);
+        String testName = "Length Validation Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
     }
 
     @Test
@@ -24,7 +26,9 @@ public class PasswortValidierungTest {
 
         boolean actual = PasswortValidierung.hasValidLength(input);
 
-        assertEquals(expected, actual, () -> "Expected " + expected + " but got " + actual + " for input: " + input);
+        String testName = "Length Validation Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
     }
 
     @Test
@@ -34,7 +38,9 @@ public class PasswortValidierungTest {
 
         boolean actual = PasswortValidierung.hasValidLength(input);
 
-        assertEquals(expected, actual, () -> "Expected " + expected + " but got " + actual + " for input: " + input);
+        String testName = "Length Validation Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
     }
 
     // endregion
@@ -48,17 +54,21 @@ public class PasswortValidierungTest {
 
         boolean actual = PasswortValidierung.containsDigit(input);
 
-        assertEquals(expected, actual, () -> "Expected " + expected + " but got " + actual + " for input: " + input);
+        String testName = "Digit Validation Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
     }
 
     @Test
     public void containsDigit_shouldReturnFalse_calledWithABC() {
         String input = "ABC";
-        boolean expected = true;
+        boolean expected = false;
 
         boolean actual = PasswortValidierung.containsDigit(input);
 
-        assertEquals(expected, actual, () -> "Expected " + expected + " but got " + actual + " for input: " + input);
+        String testName = "Digit Validation Test ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
     }
 
     // endregion

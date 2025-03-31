@@ -23,7 +23,7 @@ public class PasswortValidierung {
     }
 
     public static boolean containsDigit(String password) {
-        return false;
+        return password.matches(".*\\d.*");
     }
 
     public static boolean containsUppercaseAndLowercase(String password) {
