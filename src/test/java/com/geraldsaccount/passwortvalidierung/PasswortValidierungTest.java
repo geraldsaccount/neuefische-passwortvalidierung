@@ -67,6 +67,30 @@ public class PasswortValidierungTest {
                 () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
     }
 
+    @Test
+    public void isValidPassword_shouldReturnFalse_whenPasswordHasNoSpecialCharacter() {
+        String input = "StrongPass1"; // No special character
+        boolean expected = false;
+
+        boolean actual = PasswortValidierung.isValidPassword(input);
+
+        String testName = "Password missing special character test: ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
+    @Test
+    public void isValidPassword_shouldReturnFalse_whenPasswordContainsInvalidCharacters() {
+        String input = "Invalid Pass1!"; // Contains space
+        boolean expected = false;
+
+        boolean actual = PasswortValidierung.isValidPassword(input);
+
+        String testName = "Password contains invalid characters test: ";
+        assertEquals(expected, actual,
+                () -> testName + "Expected " + expected + " but got " + actual + " for input: " + input);
+    }
+
     // endregion
 
     // region Password Length
