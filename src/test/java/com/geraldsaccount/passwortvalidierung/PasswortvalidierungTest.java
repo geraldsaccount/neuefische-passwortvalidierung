@@ -3,7 +3,7 @@ package com.geraldsaccount.passwortvalidierung;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-public class PasswortValidierungTest {
+public class PasswortvalidierungTest {
 
     // region Password Validation
 
