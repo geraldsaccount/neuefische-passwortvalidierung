@@ -1,26 +1,26 @@
-# Passwortvalidierung
+# Password Validation
 
-Dieses Projekt wurde im Rahmen einer Unterrichtseinheit erstellt, um die Grundlagen von Java, Unit-Testing, Maven und Continuous Integration (CI) zu üben und zu vertiefen.
+This project was created as part of a teaching unit to practice and deepen the basics of Java, unit testing, Maven, and Continuous Integration (CI).
 
-## Ziel des Projekts
+## Project Goal
 
-Das Ziel ist es, eine Passwortvalidierung zu implementieren, die verschiedene Kriterien überprüft, wie z. B. Mindestlänge, Groß- und Kleinschreibung sowie Sonderzeichen. Zusätzlich werden Unit-Tests geschrieben, um die Funktionalität der Validierung sicherzustellen. Continuous Integration wird verwendet, um die Tests automatisch auszuführen.
+The goal is to implement a password validation that checks various criteria, such as minimum length, uppercase and lowercase letters, and special characters. Additionally, unit tests are written to ensure the functionality of the validation. Continuous Integration is used to automatically execute the tests.
 
-## Technologien
+## Technologies
 
-- **Java**: Für die Implementierung der Passwortvalidierung.
-- **Maven**: Für die Verwaltung von Abhängigkeiten und den Build-Prozess.
-- **JUnit**: Für das Schreiben und Ausführen von Unit-Tests.
-- **Continuous Integration (CI)**: Für die automatische Ausführung der Tests bei Änderungen.
+- **Java**: For implementing the password validation.
+- **Maven**: For dependency management and the build process.
+- **JUnit**: For writing and executing unit tests.
+- **Continuous Integration (CI)**: For automatically running the tests upon changes.
 
-## Lerninhalte
+## Learning Objectives
 
-- Grundlagen der Java-Programmierung
-- Arbeiten mit Kontrollstrukturen und String-Methoden
-- Einführung in Maven und Build-Management
-- Schreiben von Unit-Tests mit JUnit
-- Einführung in Continuous Integration
+- Basics of Java programming
+- Working with control structures and string methods
+- Introduction to Maven and build management
+- Writing unit tests with JUnit
+- Introduction to Continuous Integration
 
-## Lizenz
+## License
 
-Dieses Projekt wurde zu Lernzwecken erstellt und ist nicht für den produktiven Einsatz gedacht.
+This project was created for educational purposes and is not intended for production use.
